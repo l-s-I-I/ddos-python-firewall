@@ -302,7 +302,7 @@ while 1:
             i_ack += 2
 
         if len(TCP.options) > 0:
-            if TCP.options[0][0] is 'MSS':
+            if TCP.options[0][0] == 'MSS':
                 opts = 1
         if IP.dport == 22: return
         packets[IP.src] = {}
